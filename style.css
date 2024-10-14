@@ -8,13 +8,50 @@ text-decoration:none;
 html{
 scroll-behavior:smooth;
 }
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.scale-in {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: scaleIn 1s forwards;
+}
+
+@keyframes scaleIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 body{
 background-color:white;
 color:black;
 font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 font-size:25px;
 }
-.smallest{
+.smallester{
 font-size:16px;
 }
 header{
@@ -95,7 +132,7 @@ border:1px;
 padding:15px 30px;
 border-radius:50px;
 border-style:solid;
-font-family;Comic Sans MS;
+font-family:Comic Sans MS;
 font-size:16px;
 margin:5px;
 font-style:bold;
@@ -112,7 +149,7 @@ img{
 background-color:trasparent;
 }
 .small{
-font-size:20px;
+font-size:16px;
 }
 .black{
 color:black;
@@ -120,12 +157,11 @@ font-size:20px;
 text-decoration:underline;
 }
 .ones:hover{
-width:30px;
-height:30px;
-transition:2s;
+margin:1rem;
+transition:1s;
 }
-.ones a{
-padding:0px;
+.ones{
+gap:0px;
 }
 .navclass{
 padding:50px;
@@ -156,8 +192,11 @@ backdrop-filter:blur(10px);
 box-shadow:10px 10px 10px 10px rgba(0,0,0,0.1);
 transition:1s;
 }
+nav{
+padding:0px;
+}
 .small{
-font-size:20px;
+font-size:1rem;
 }
 @media (max-width:1320px){
 header{
@@ -174,19 +213,59 @@ img{
 width:100%;
 height:auto;
 }
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.scale-in {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: scaleIn 1s forwards;
+}
+
+@keyframes scaleIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 div{
 justify-content:space-around;
 }
 .box{
 width:100%;
 margin:1rem;
-padding:20px;
+height:auto;
+padding:1rem;
 }
 #Home{
-padding:10px;
+padding:0px;
+}
+#Skills{
+padding:0px;
 }
 section{
-padding:10px;
+padding:0px;
 }
 h1,p{
 font-size:1.5rem;
@@ -194,7 +273,7 @@ font-size:1.5rem;
 .firstimage{
 width:100%;
 height:auto;
-padding:50px;
+padding:70px;
 padding-bottom:5px;
 }
 .ones{
@@ -231,6 +310,10 @@ background:black;
 transition:1s;
     opacity:0;
 }
+.small{
+    font-size:1.25rem;
+    padding:1rem;
+}
 .one{
 width:80px;
 height:80px;
@@ -252,7 +335,14 @@ opacity:1;
 .smaller{
 font-size:20px;
 }
-.small{
-font-size:10px;
+.secondimage{
+padding:20px;
+}
+.smallest{
+font-size:0.5rem;
+}
+.ones{
+height:20px;
+width:20px;
 }
 }
