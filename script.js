@@ -9,36 +9,31 @@ link.onclick = function(){
 navBar.classList.remove('active');
     }
 });
-// Function to fade in elements
-function fadeIn(element) {
-    let opacity = 0;
-    element.style.display = 'block';
-    const interval = setInterval(() => {
-        if (opacity >= 1) {
-            clearInterval(interval);
-        }
-        element.style.opacity = opacity;
-        opacity += 0.1;
-    }, 50);
-}
+// Add this to your script.js
 
-// Apply fade-in effect to all sections when the page loads
-window.onload = function() {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.style.opacity = 0; // Initially hide section
-        fadeIn(section); // Fade in section
-    });
-};
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
 
-// Image hover effect for skills
-const skillImages = document.querySelectorAll('.box img');
-skillImages.forEach(image => {
-    image.addEventListener('mouseover', () => {
-        image.style.transform = 'scale(1.1)';
-        image.style.transition = 'transform 0.3s ease';
-    });
-    image.addEventListener('mouseout', () => {
-        image.style.transform = 'scale(1)';
-    });
+    // Function to check if section is in view
+    function checkSectionInView() {
+        const windowHeight = window.innerHeight;
+
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+
+            if (sectionTop < windowHeight && sectionTop >= 0) {
+                // Add animation classes when the section is in view
+                if (section.id === "Home") {
+                    section.querySelector('.firstimage').classList.add('scale-in');
+                } else {
+                    section.classList.add('slide-in');
+                }
+            }
+        });
+    }
+
+    // Check on scroll
+    window.addEventListener('scroll', checkSectionInView);
+    // Initial check on load
+    checkSectionInView();
 });
