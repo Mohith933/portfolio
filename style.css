@@ -10,8 +10,7 @@ scroll-behavior:smooth;
 }
 input{
     padding:10px 20px;
-    border-radius:20px;
-    color:black;
+    border-radius:10px;
 }
 .fade-in {
     opacity: 0;
