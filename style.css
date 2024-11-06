@@ -8,6 +8,11 @@ text-decoration:none;
 html{
 scroll-behavior:smooth;
 }
+input{
+    padding:10px 20px;
+    border-radius:20px;
+    color:black;
+}
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
